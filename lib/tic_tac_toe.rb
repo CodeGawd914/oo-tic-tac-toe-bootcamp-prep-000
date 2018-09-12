@@ -78,25 +78,25 @@ def current_player
 return current_player
 end
 
-def won?(board)
+def won?
   WIN_COMBINATIONS.each do |combo| 
-  if board[combo[0]] != " " && board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
+  if @board[combo[0]] != " " && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
     return combo
   end
   end
   return false
 end
 
-def full? (board)
-  if board.detect { |i| i == " " }
+def full? 
+  if @board.detect { |i| i == " " }
     return false
   else 
     return true
   end
 end
 
-def draw? (board)
-  if !won?(board) && full?(board)
+def draw?
+  if !won? && full?
     return true
     puts "Cat's Game!"
   else
@@ -104,8 +104,8 @@ def draw? (board)
   end
 end
 
-def over? (board)
-  if won?(board) || draw?(board) || full?(board)
+def over?
+  if won? || draw? || full?
     return true
   else
     return false
