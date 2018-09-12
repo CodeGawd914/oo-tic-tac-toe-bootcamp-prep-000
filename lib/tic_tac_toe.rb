@@ -117,5 +117,17 @@ def winner (board)
     board[game_winner[0]]
   end
 end
+def winner (board)
+  game_winner = won?(board)
+  if game_winner 
+    board[game_winner[0]]
+  end
+end
+def winner (board)
+  game_winner = won?(board)
+  if game_winner 
+    board[game_winner[0]]
+  end
+end
 
 end
