@@ -117,4 +117,15 @@ def winner
     board[game_winner[0]]
   end
  end
+ def play
+  until over?
+current_player
+turn
+  end
+  if won?
+    puts "Congratulations #{winner(board)}!"
+  else
+    puts "Cat's Game!"
+  end
+end
 end
