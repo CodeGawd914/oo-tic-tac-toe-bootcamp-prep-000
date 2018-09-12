@@ -116,5 +116,5 @@ def winner (board)
   if game_winner 
     board[game_winner[0]]
   end
-end
+ end
 end
