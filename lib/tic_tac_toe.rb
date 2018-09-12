@@ -51,7 +51,7 @@ def turn
   input = gets.strip
     answer = input_to_index(input)
     if valid_move?(answer)
-      move (answer, current_player)
+      move (answer,current_player)
       display_board
   else
     puts "Invalid Entry!"
