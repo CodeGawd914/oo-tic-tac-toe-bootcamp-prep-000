@@ -111,19 +111,21 @@ def over?
     return false
   end
 end
+
 def winner 
   game_winner = won?
   if game_winner 
-    board[game_winner[0]]
+    @board[game_winner[0]]
   end
  end
+ 
  def play
   until over?
 current_player
 turn
   end
   if won?
-    puts "Congratulations #{winner(board)}!"
+    puts "Congratulations #{winner}!"
   else
     puts "Cat's Game!"
   end
