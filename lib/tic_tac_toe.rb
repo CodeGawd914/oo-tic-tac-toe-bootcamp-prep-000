@@ -46,5 +46,36 @@ def valid_move?(index)
   end
 end
 
+def turn
+  puts "Please enter 1-9:"
+  input = gets.strip
+    answer = input_to_index(input)
+    if valid_move?(answer)
+      move (answer,current_player)
+      display_board
+  else
+    puts "Invalid Entry!"
+    turn
+  end  
+end
+
+def turn_count
+  counter = 0
+@board.each do |space|
+  if space == "X" || space == "O"
+    counter += 1
+  end
+  end
+  return counter
+end
+
+def current_player
+  if turn_count % 2 ==0
+    current_player = "X"
+  else
+    current_player = "O"
+  end
+return current_player
+end
 
 end
